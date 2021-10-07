@@ -17,7 +17,7 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <% link_to 'My App', root_path, class: "navbar-item" %>
+          <%= link_to 'Demo Blog', root_path, class: "navbar-item" %>
           <span class="navbar-burger burger" data-target="navbarMenuHeroA">
             <span></span>
             <span></span>
@@ -26,7 +26,7 @@
         </div>
         <div id="navbarMenuHeroA" class="navbar-menu">
           <div class="navbar-end">
-            <%= link_to "Create New Post", new_post_path, class: "navbar-item" %>
+            <% link_to "Create New Post", new_post_path, class: "navbar-item" %>
             </span>
           </div>
         </div>
@@ -38,10 +38,7 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <p class="title">
-        Title
-      </p>
-      <p class="subtitle">
-        Subtitle
+        <%= yield :page_title %>
       </p>
     </div>
   </div>
